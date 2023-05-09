@@ -8,6 +8,7 @@ import Country from "./components/Country"
 import Contact from './components/Constact';
 
 function App() {
+
   return (
     <div className="App">
       <NavBar />
