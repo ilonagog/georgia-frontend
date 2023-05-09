@@ -1,22 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import CountryLink from './CountryLink'
+import { Link } from 'react-router-dom'
 
-const Countries = () => {
+const Countries = ({ countries }) => {
 
-    const [countries, setCountries] = useState([])
+    // const [countries, setCountries] = useState([])
 
-    useEffect(() => {
-        fetch('http://localhost:9292/countries')
-            .then(resp => resp.json())
-            .then(data => {
-                console.log(data)
-                setCountries(data)
-            })
-    }, [])
-    const countriesList = countries.map(c => <CountryLink key={c.id} country={c} />)
+    // useEffect(() => {
+    //     fetch('http://localhost:9292/countries')
+    //         .then(resp => resp.json())
+    //         .then(data => {
+    //             console.log(data)
+    //             setCountries(data)
+    //         })
+    // }, [])
+    const countriesList = countries.map(country => <CountryLink key={country.id} country={country} />)
     return (
         <div>
             <ul>{countriesList}</ul>
+            <Link to={'/countryform'}>
+                <button className='form-link'>Add New Country !</button>
+            </Link>
 
         </div>
     )
