@@ -19,7 +19,7 @@ const Countries = ({ countries }) => {
         <div>
             <ul>{countriesList}</ul>
             <Link to={'/countryform'}>
-                <button className='form-link'>Add New Country !</button>
+                <button className='form-link'>Add Country !</button>
             </Link>
 
         </div>
