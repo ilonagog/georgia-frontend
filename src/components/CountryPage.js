@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CountryLink = ({ country }) => {
+const CountryPage = ({ country }) => {
     return (
         <div>
 
@@ -15,4 +15,4 @@ const CountryLink = ({ country }) => {
     )
 }
 
-export default CountryLink
+export default CountryPage

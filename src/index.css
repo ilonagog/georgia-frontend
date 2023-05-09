@@ -61,7 +61,7 @@ code {
 }
 
 .video {
-  position: inherit;
+  position: center;
   height: 100%;
   width: 100%;
   top: 0;
@@ -136,7 +136,7 @@ img {
 }
 
 .overlay {
-  position: absolute;
+
   height: 100%;
   width: 100%;
   top: 0;
@@ -145,4 +145,8 @@ img {
   /* background: rgb(203, 227, 227); */
   mix-blend-mode: hard-light;
 
+}
+
+.home {
+  display: block;
 }

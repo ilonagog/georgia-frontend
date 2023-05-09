@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Tour from '../components/Tour'
+import { Link } from 'react-router-dom'
 
 const Country = () => {
     const [country, setCountry] = useState({
@@ -22,6 +23,9 @@ const Country = () => {
 
     return (
         <div>
+            <Link to={`/countries/${params.id}/tourform`}>
+                <button className="form-link" >Add Tours</button>
+            </Link>
             <h1>{country.name}</h1>
             <h3>Tours: {tours}</h3>
         </div>

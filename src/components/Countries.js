@@ -1,5 +1,5 @@
 import React from 'react'
-import CountryLink from './CountryLink'
+import CountryPage from './CountryPage'
 import { Link } from 'react-router-dom'
 
 const Countries = ({ countries }) => {
@@ -14,7 +14,7 @@ const Countries = ({ countries }) => {
     //             setCountries(data)
     //         })
     // }, [])
-    const countriesList = countries.map(country => <CountryLink key={country.id} country={country} />)
+    const countriesList = countries.map(country => <CountryPage key={country.id} country={country} />)
     return (
         <div>
             <ul>{countriesList}</ul>
