@@ -12,7 +12,6 @@ const Tour = ({ tour }) => {
                 <h3>Days:{tour.days}</h3>
             </li>
         </ul>
-
     )
 }
 

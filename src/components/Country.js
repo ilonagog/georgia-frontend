@@ -19,7 +19,7 @@ const Country = () => {
             })
     }, [])
 
-    const tours = country.tours.map(t => <Tour key={t.id} tour={t} />)
+    const tours = country.tours.map(tour => <Tour key={tour.id} tour={tour} />)
 
     return (
         <div>

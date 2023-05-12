@@ -18,7 +18,7 @@ const Countries = ({ countries }) => {
     return (
         <div>
             <ul>{countriesList}</ul>
-            <Link to={'/countryform'}>
+            <Link to={'/country/new'}>
                 <button className='form-link'>Add Country !</button>
             </Link>
 

@@ -1,8 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 
-const CountryForm = () => {
+const NewCountry = ({ addNewCountry }) => {
     const [name, setName] = useState('')
+
+    const resetForm = () => {
+        setName("")
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -15,11 +19,11 @@ const CountryForm = () => {
                 name: name
             })
         })
-            .then((resp => resp.json())
-                .then((data) =>
-                    console.log(data)
-                )
-            )
+            .then((resp) => resp.json())
+            .then((newCountry) => {
+                addNewCountry(newCountry);
+                resetForm()
+            })
     }
     const handleChange = (e) => {
         setName(e.target.value)
@@ -37,4 +41,4 @@ const CountryForm = () => {
     )
 }
 
-export default CountryForm
+export default NewCountry
