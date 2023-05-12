@@ -23,7 +23,7 @@ const Country = () => {
 
     return (
         <div>
-            <Link to={`/countries/${params.id}/tourform`}>
+            <Link to={`/countries/${params.id}/tour/new`}>
                 <button className="form-link" >Add Tours</button>
             </Link>
             <h1>{country.name}</h1>

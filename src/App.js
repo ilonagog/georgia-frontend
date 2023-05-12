@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/countries" element={<Countries countries={countries} />} />
         <Route exact path="/countries/:id" element={<Country />} />
         <Route exact path='/country/new' element={<NewCountry addNewCountry={addNewCountry} />} />
-        <Route exact path='/countries/:id/tourform' element={<NewTour />} />
+        <Route exact path='/countries/:id/tour/new' element={<NewTour />} />
         {/* <Route exact path='/tours' element={<Tours tours={tours} />} /> */}
         <Route exact path='/contact' element={<Contact />} />
       </Routes>
