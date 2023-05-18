@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-const NewTour = () => {
+const NewTour = ({ addTour }) => {
     const [name, setName] = useState('')
     const [image_url, setImage_url] = useState('')
     const [price, setPrice] = useState('')
@@ -33,7 +33,7 @@ const NewTour = () => {
         })
             .then(r => r.json())
             .then((data) => {
-                console.log(data)
+                addTour(data)
                 resetForm()
             })
         console.log(name)

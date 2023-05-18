@@ -25,16 +25,21 @@ function App() {
   const addNewCountry = (newCountry) => {
     setCountries((countryObj) => [...countryObj, newCountry])
   }
-
+  const addTour = (tour) => {
+    const updatedCountry = { ...country, tours: [...country.tours, tour] }
+    const newTours = [...country.tours, tour]
+    country.tours = newTours
+    setCountry(updatedCountry)
+  }
   return (
     <div className="App">
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/countries" element={<Countries countries={countries} />} />
-        <Route exact path="/countries/:id" element={<Country />} />
+        <Route exact path="/countries/:id" element={<Country countries={countries} setCountries={setCountries} />} />
         <Route exact path='/country/new' element={<NewCountry addNewCountry={addNewCountry} />} />
-        <Route exact path='/countries/:id/tour/new' element={<NewTour />} />
+        <Route exact path='/countries/:id/tour/new' element={<NewTour addTour={addTour} />} />
         {/* <Route exact path='/tours' element={<Tours tours={tours} />} /> */}
         <Route exact path='/contact' element={<Contact />} />
       </Routes>
