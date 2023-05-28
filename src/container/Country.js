@@ -9,6 +9,7 @@ const Country = ({ countries, setCountries }) => {
     const [country, setCountry] = useState({
         tours: []
     })
+    // console.log(tours)
     const { id } = useParams()
 
     useEffect(() => {
@@ -35,6 +36,7 @@ const Country = ({ countries, setCountries }) => {
                     ...country,
                     tours: [...country.tours, data]
                 }
+                console.log(tour)
                 const newCountries = countries.map(c => c.id === data.country_id ? newCountry : c)
                 setCountries(newCountries)
             })

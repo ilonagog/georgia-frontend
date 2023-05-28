@@ -20,9 +20,9 @@ const TourEditForm = ({ tour, editATour, country }) => {
             ...tour,
             country_id: country.id,
             name: name,
+            image_url: image_url,
             price: price,
             days: days,
-            image_url: image_url
         }
         editATour(newTour)
         resetForm()
@@ -31,11 +31,15 @@ const TourEditForm = ({ tour, editATour, country }) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <p>Name: <input onChange={(e) => setName(e.target.value)} value={name} placeholder={name} type="text" /></p>
-                <p>Image: <input image={image_url} onChange={(e) => setImage(e.target.value)} value={image_url} placeholder={image_url} type="text" /></p>
-                <p>Price: <input price={price} onChange={(e) => setPrice(e.target.value)} value={price} placeholder={price} type="text" /></p>
-                <p>Days: <input days={days} onChange={(e) => setDays(e.target.value)} value={days} placeholder={days} type="text" /></p>
-                <button type="submit"> Save Changes </button>
+                <label>Name:</label>
+                <input onChange={(e) => setName(e.target.value)} value={name} type="text" />
+                <label>Image:</label>
+                <input image={image_url} onChange={(e) => setImage(e.target.value)} value={image_url} type="text" />
+                <label>Price:</label>
+                <input price={price} onChange={(e) => setPrice(e.target.value)} value={price} type="text" />
+                <label>Days:</label>
+                <input days={days} onChange={(e) => setDays(e.target.value)} value={days} type="text" />
+                <input type='submit' />
             </form>
         </div>
     )
