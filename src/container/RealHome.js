@@ -11,13 +11,13 @@ const RealHome = () => {
             <h2>Welcome to the tour page.</h2>
             <br />
             <div className="videoContainer">
-                <video className='video' src={video1} muted autoPlay loop type="video/mp4"></video>
+                <video className='videos' src={video1} muted autoPlay loop type="video/mp4"></video>
                 <br />
-                <video className='video' src={video} muted autoPlay loop type="video/mp4"></video>
+                <video className='videos' src={video} muted autoPlay loop type="video/mp4"></video>
                 <br />
-                <video className='video' src={video2} muted autoPlay loop type="video/mp4"></video>
+                <video className='videos' src={video2} muted autoPlay loop type="video/mp4"></video>
                 <br />
-                <video className='video' src={video3} muted autoPlay loop type="video/mp4"></video>
+                <video className='videos' src={video3} muted autoPlay loop type="video/mp4"></video>
             </div>
         </div>
     )
