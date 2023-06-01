@@ -219,20 +219,19 @@ select:focus {
 
 .videos {
   width: 400px;
+  margin: inherit;
   align-items: center;
   column-gap: 3rem;
   display: grid;
-
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 0fr));
 }
 
 .videoContainer {
   display: grid;
-
   padding-left: 20px;
   align-items: center;
 
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 0fr));
 }
 
 .container {
@@ -240,6 +239,9 @@ select:focus {
   align-items: center;
 }
 
+.footer {
+  display: grid;
+}
 
 /* cards */
 
@@ -256,11 +258,14 @@ select:focus {
 }
 
 .card {
-
-  max-width: 400px;
-  display: inline-block;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin: inherit;
+  max-width: fit-content;
+  display: -ms-inline-grid;
   grid-template-rows: auto 1fr auto;
   border: 2px solid var(--dark-turquoise);
+
 }
 
 /* @media screen and (max-width: 588px) {

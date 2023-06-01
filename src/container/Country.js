@@ -5,7 +5,7 @@ import TourForm from './TourForm'
 import { useParams } from 'react-router-dom'
 
 const Country = ({ countries, setCountries }) => {
-    const [viewTourEditForm, setViewTourEditForm] = useState(false)
+    // const [viewTourEditForm, setViewTourEditForm] = useState(false)
     const [viewTourForm, setViewTourForm] = useState(false)
     const [country, setCountry] = useState({
         tours: []
@@ -67,7 +67,7 @@ const Country = ({ countries, setCountries }) => {
                     updatedTour.country_id ? updatedCountry : c)
                 setCountries(updatedCountries)
             })
-        setViewTourEditForm(false)
+        // setViewTourEditForm(false)
     }
 
 
@@ -87,7 +87,7 @@ const Country = ({ countries, setCountries }) => {
     }
 
 
-    const tours = country.tours.map(t => <SingleTour key={t.id} tour={t} deleteATour={deleteTour} editATour={editTour} country={country} viewTourEditForm={viewTourEditForm} setViewTourEditForm={setViewTourEditForm} />)
+    const tours = country.tours.map(t => <SingleTour key={t.id} tour={t} deleteATour={deleteTour} editATour={editTour} country={country} />)
     // console.log(tours)
 
     function handleClick() {
@@ -98,13 +98,18 @@ const Country = ({ countries, setCountries }) => {
         <div>
             <br />
             <h2>{country.name}</h2>
+            <br />
             {viewTourForm ?
                 <TourForm addATour={addTour} country={country} />
                 :
                 <button className="button" onClick={handleClick}>Add Tour</button>
             }
-            <hr />
-            <h3>{tours}</h3>
+            <br />
+            <br />
+            <div className='cards'>
+                <h3>{tours}</h3>
+            </div>
+
             <br />
         </div >
     )

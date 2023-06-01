@@ -44,7 +44,7 @@ const TourForm = ({ addATour, country }) => {
                 <input type="text" image_url="image" value={image_url} onChange={handleImageChange} />
                 <label htmlFor='price'>Price:</label>
                 <input type="text" price="price" value={price} onChange={handlePriceChange} />
-                <label htmlFor='days'>Days</label>
+                <label htmlFor='days'>Days:</label>
                 <input type="text" days="days" value={days} onChange={handleDaysChange} />
                 <input type='submit' />
             </form>

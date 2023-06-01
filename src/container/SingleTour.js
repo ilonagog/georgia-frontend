@@ -1,18 +1,18 @@
 
-import React, { useState } from 'react'
+import React from 'react'
 import TourEditForm from './TourEditForm'
 
-const SingleTour = ({ deleteATour, editATour, tour, country, viewTourEditForm, setViewTourEditForm }) => {
+const SingleTour = ({ deleteATour, editATour, tour, country }) => {
     // const [viewTourEditForm, setViewTourEditForm] = useState(false)
 
-    function handleEditView() {
-        setViewTourEditForm(true)
-    }
+    // function handleEditView() {
+    //     setViewTourEditForm(true)
+    // }
 
     return (
 
         <div className="container">
-            <li className='card'>
+            <ul className='card'>
                 <p>{tour.name}</p>
                 <figure className='image'>
                     <img className='image' src={tour.image_url} alt={tour.image_url} /></figure>
@@ -20,13 +20,15 @@ const SingleTour = ({ deleteATour, editATour, tour, country, viewTourEditForm, s
                     <p>Price: $ {tour.price}</p>
                     <p>Days: {tour.days}</p>
                 </section>
-                {viewTourEditForm ?
-                    <TourEditForm editATour={editATour} tour={tour} country={country} />
-                    :
-                    <button className="button" onClick={handleEditView}>Edit description</button>
-                }
-                <button onClick={() => deleteATour(tour.id)} >Delete</button>
-            </li>
+                {/* {viewTourEditForm ? */}
+                <TourEditForm editATour={editATour} tour={tour} country={country} />
+
+                {/* <button className="button" onClick={handleEditView}>Edit description</button> */}
+                <footer className='footer'>
+                    <button onClick={() => deleteATour(tour.id)} >Delete</button>
+                </footer>
+
+            </ul>
         </div>
     )
 }

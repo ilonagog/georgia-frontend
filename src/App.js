@@ -20,7 +20,11 @@ function App() {
         console.log(data)
         setCountries(data)
       })
+
   }, [])
+  useEffect(() => {
+    console.log("update")
+  }, [countries])
   return (
     <div className="App">
       <NavBar />
