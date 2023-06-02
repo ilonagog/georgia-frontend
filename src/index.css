@@ -257,7 +257,39 @@ select:focus {
 
 }
 
+.countries {
+  display: inline-flex;
+}
+
+ul {
+  column-count: 3;
+
+  column-rule-color: lightblue;
+}
+
+li {
+  display: grid;
+  column-count: 3;
+  list-style: none;
+  letter-spacing: 2.5px;
+
+}
+
+/* ul {
+  font-size: 200%;
+  list-style-image: linear-gradient(to left bottom, red, blue);
+} */
+li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+li:before {
+  content: '🌎';
+}
+
+
 .card {
+  display: grid;
   padding: 1rem;
   margin-bottom: 1rem;
   margin: inherit;
@@ -274,6 +306,14 @@ select:focus {
     max-width: inherit;
   }
 } */
+.about {
+  padding: 65px;
+  column-count: 3;
+  column-gap: 40px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: rgb(133, 21, 207);
+}
 
 .card .image {
   max-height: 200px;

@@ -34,11 +34,12 @@ const Countries = ({ countries, setCountries }) => {
     const countriesList = countries.map(c => <CountryLink key={c.id} country={c} />)
     return (
         <div className='conteiner'>
-            <ul>{countriesList}</ul>
+            <button className="button" onClick={handleClick}>Add Country!</button>
+            <br />
             {viewAddForm ?
                 <CountryForm addACountry={addCountry} />
                 :
-                <button className="button" onClick={handleClick}>Add Country!</button>
+                <ul>{countriesList}</ul>
             }
         </div>
     )

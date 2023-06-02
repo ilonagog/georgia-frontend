@@ -5,7 +5,15 @@ const CountryLink = ({ country }) => {
     return (
         <div>
             <Link to={`/countries/${country.id}`}>
-                <h3><li>{country.name}</li></h3>
+                <br />
+                <div className='countries'>
+                    <h3>
+
+                        <li>{country.name}</li>
+
+                    </h3>
+                </div>
+
             </Link>
         </div>
     )
